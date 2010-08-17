@@ -1,0 +1,122 @@
+---
+# Host entries are used if they match the hostname
+# Group 'default' is chosen if a host entry is not found.
+# Groups may be included in host entries
+# Formatting is YAML
+
+default:
+    - /etc/Xservers
+    - /etc/auto_direct.local
+    - /etc/auto_opt.local
+    - /etc/auto_pkgs.local
+    - /etc/bootptab
+    - /etc/exports
+    - /etc/dfs/dfstab
+    - /etc/vfstab
+    - /etc/gated.conf
+    - /etc/logadm.conf
+    - /etc/lpd.conf
+    - /etc/lpd.perms
+    - /etc/hosts.lpd
+    - /etc/printcap
+    - /etc/ssh/ssh_host_rsa_key
+    - /etc/ssh/ssh_host_rsa_key.pub
+    - /etc/ssh/ssh_host_rsa1_key
+    - /etc/ssh/ssh_host_rsa1_key.pub
+    - /etc/ssh/ssh_host_key
+    - /etc/ssh/ssh_host_key.pub
+    - /etc/ssh/ssh_host_dsa_key
+    - /etc/ssh/ssh_host_dsa_key.pub
+    - /etc/inet/inetd.conf
+    - /etc/rc.wks-specific
+    - /etc/rc3.d/S99local
+    - /var/spool/cron
+    - /var/spool/calendar
+    - /databases
+    - /etc/snmpd.conf
+    - /etc/openwin/server/etc/OWconfig
+    - /etc/krb5.conf
+    - /etc/puppet/ssl
+    - /var/puppet/ssl
+    - /var/lib/puppet/ssl
+    - /etc/libvirt/qemu
+
+mailhost:
+    - /etc/mail
+    - /etc/procmailrc
+    - /etc/syslog.conf
+
+opnet:
+    - /var/adm/OPNET_license
+
+linuxiscsi:
+    - /etc/iscsi/initiatorname.iscsi
+
+zok.cat.pdx.edu:
+    - default
+    - /etc/syslog.conf
+    - /etc/openwin/server/etc/OWconfig
+
+ghost.cs.pdx.edu:
+    - default
+    - opnet
+
+opnet.cs.pdx.edu:
+    - default
+    - opnet
+
+scalpel.cat.pdx.edu:
+    - default
+    - /opt/csw/etc/samba/smb.conf
+
+sirius.cs.pdx.edu:
+    - default
+    - /var/lbnamed
+
+euler.me.pdx.edu:
+    - default
+    - /etc/auto_master
+    - /etc/named.boot
+    - /etc/mail
+    - /var/named/named.boot
+    - /var/named/cache.root
+    - /var/named/revp.localhost
+    - /var/named/zone.localhost
+
+geppetto.cat.pdx.edu:
+    - default
+    - /etc/apache2
+    - /etc/nginx
+
+bunny.cat.pdx.edu:
+    - default
+    - /etc/sfw/smb.conf
+    - /etc/dfs/dfstab
+    - /root
+    - /var/spool/cron/crontabs
+
+caerbannog.cat.pdx.edu:
+    - default
+    - /etc/sfw/smb.conf
+    - /etc/dfs/dfstab
+    - /root
+    - /var/spool/cron/crontabs
+
+nt4.cat.pdx.edu:
+    - default
+    - /etc/sfw/smb.conf
+    - /etc/dfs/dfstab
+    - /root
+    - /var/spool/cron/crontabs
+
+spof.cat.pdx.edu:
+    - default
+    - /etc/lvm
+
+dagger.cat.pdx.edu:
+    - default
+    - linuxiscsi
+
+sword.cat.pdx.edu:
+    - default
+    - linuxiscsi
